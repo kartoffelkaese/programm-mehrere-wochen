@@ -1,524 +1,802 @@
-<div style="text-align:center;margin-bottom:20px;">Stornierungen und Umbuchungen bitte per Mail: info@tanzstudio-schlegl.de</div>
-<div class="tg-wrap">
-    <table class="tgende">
-        <thead>
-            <tr class="date" id="date">
-                <th colspan="7">03.08.20 - 08.08.20
-                </th>
-            </tr>
-            <tr>
-                <th class="tg-t">Zeit</th>
-                <th class="tg-mt">Montag</th>
-                <th class="tg-mt">Dienstag</th>
-                <th class="tg-mt">Mittwoch</th>
-                <th class="tg-mt">Donnerstag</th>
-                <th class="tg-mt">Freitag</th>
-                <th class="tg-mt">Samstag</th>
-                <th class="tg-trm">Zeit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="tg-t">15:00 - 15:45</td>
-                <td class="tg-button">Sodapop Choreo 1 (solo)<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-button">Sodapop Choreo 2 (solo)<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-button">ChaChaCha: Basic (solo)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP161T/">Anmelden</a></button></td>
-                <td class="tg-trm">15:00 - 15:45</td>
+<style>
+	/*
+	<button class="button-voll">Ausgebucht</button>
+    <button class="button-voll">Abgesagt</button> 
+	*/
+:root {
+	--agb: "Übungsstunden 10 Euro pro Person / Workshops 15 Euro pro Person";
+	--agba: "Anmeldung nur Paarweise - Außer bei den mit (solo) beschrifteten Einheiten";
+	--agbb: "Mindestteilnehmer: 5 Paare (Workshops) / 10 Paare (Übungsstunden)";
+	--agbc: "Nicht stattfindende Kurse sagen wir am Tag vorher per Mail ab.";
+	--3zeilen: 159px; /* Für 3 Zeilen Kurse */
+	--2zeilen: 138px; /* Für 2 Zeilen Kurse */
+	}
 
-            </tr>
-            <tr>
-                <td class="tg-t">16:00 - 16:45</td>
-                <td class="tg-button">Sodapop Choreo 2 (solo)<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-button">Sodapop Choreo 1 (solo)<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-button">Wiener Walzer: Halbe Drehungen (paarweise)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP162T/">Anmelden</a></button></td>
-                <td class="tg-trm">16:00 - 16:45</td>
+.date {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 24px;
+    border: 1px solid #000;
+    padding: 10px;
+}
 
-            </tr>
-            <tr>
-                <td colspan="7"></td>
-            </tr>
-            <tr>
-                <td class="tg-t">17:00 - 17:45</td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt">Linedance: Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP140T/">Anmelden</a></button></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-trm">17:00 - 17:45</td>
+.date:not(:first-child) {
+margin-top: 30px;
+}
 
-            </tr>
-            <tr>
-                <td class="tg-t">18:00 - 18:45</td>
-                <td class="tg-button">Üben mit Vonda: Gemischt (1)<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Üben mit Vonda: Standardtänze<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Tango: Basic<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP131T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Sonja: Linedance Fortgeschrittene<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP141T/">Anmelden</a></button></td>
-                <td class="tg-button">Tango Argentino: Anfänger<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Salsa: Figur<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP143T/">Anmelden</a></button></td>
-                <td class="tg-trm">18:00 - 18:45</td>
+.days,
+.table {
+    margin: 0 auto;
+    font-size: 14px;
+}
 
-            </tr>
-            <tr>
-                <td class="tg-t">19:00 - 19:45</td>
-                <td class="tg-button">Üben mit Vonda: Gemischt (2)<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Üben mit Vonda: Lateintänze<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Rumba: Basic (solo)
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP132T/">Anmelden</a></button></td>
-                <td class="tg-button">Discofox: Swing In<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Tango Argentino Fortgeschrittene Figur: Ochos<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP152T/">Anmelden</a></button></td>
-                <td class="tg-button">Jive: Figur<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP164T/">Anmelden</a></button></td>
-                <td class="tg-trm">19:00 - 19:45</td>
+.dayssection {
+    font-size: 14px;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--purple);
+    border: 1px solid #000;
+}
 
-            </tr>
-            <tr>
-                <td class="tg-t">20:00 - 20:45</td>
-                <td class="tg-button">Üben mit Vonda: Gemischt (1)<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Üben mit Vonda: Standardtänze<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Üben mit Sonja + Martin: Gemischt (2)<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Salsa: Figur<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP143T/">Anmelden</a></button></td>
-                <td class="tg-button">Proseccoabend mit Sonja + Martin (alle Tänze)<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">ChaChaCha: Figur<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP165T/">Anmelden</a></button></td>
-                <td class="tg-trm">20:00 - 20:45</td>
+.section {
+    margin-bottom: -1px;
+    overflow: hidden;
+    text-align: center;
+    min-height: 117px;
+    border: 1px solid #000;
+}
 
-            </tr>
-            <tr>
-                <td class="tg-t">21:00 - 21:45</td>
-                <td class="tg-button">Üben mit Vonda: Gemischt (2)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP116T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Vonda: Lateintänze<br>
-                    <button class="button-voll">Ausgebucht</button>
-                </td>
-                <td class="tg-button">Üben mit Sonja + Martin: gemischt (1)<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Üben mit Martin: Salsa<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Proseccoabend mit Sonja + Martin (alle Tänze)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP154T/">Anmelden</a></button></td>
-                <td class="tg-mt"></td>
-                <td class="tg-trm">21:00 - 21:45</td>
+.sectionempty {
+    margin-bottom: -1px;
+    overflow: hidden;
+    break-inside: avoid;
+    min-height: 117px;
+    border: 1px solid #000;
+}
 
-            </tr>
-            <tr class="legend">
-                <td colspan="7" style="font-size:10px;">Üben gemischt (1) = Langsamer Walzer, ChaChaCha, Tango, Rumba, Salsa<br>
-                    Üben gemischt (2) = Quickstep, Wiener Walzer, Discofox, Slowfox, Jive, Samba<br>
-                    Pro Kurseinheit 10 Euro pro Person / Proseccoabend (mit 1 Glas Prosecco) 15 Euro pro Person<br>
-                    Anmeldung nur Paarweise - Außer bei den mit (solo) beschrifteten Einheiten<br>
-                    Die Kurse laufen ab 3 Paaren. Nicht stattfindende Kurse sagen wir am Tag vorher ab.<br>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+.mobiledate {
+    display: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.button {
+    background-color: var(--purple);
+    border: none;
+    color: white;
+    padding: 0 15px;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: .875rem;
+    line-height: 28px;
+    min-width: 100px;
+}
+
+.button-voll {
+	background-color: #f00;
+	border: none;
+	color: white;
+	padding: 0 15px;
+	margin-top: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: .875rem;
+	line-height: 28px;
+    min-width: 100px;
+    }
+
+div[class^=magb] {
+        display: none;
+    }
+
+@media (max-width: 960px) {
+
+    .days,
+    .sectionempty,
+	div[class^=agb] {
+        display: none;
+    }
+
+    .mobiledate {
+        display: inline;
+        font-size: 20px;
+    }
+	div[class^=magb] {
+        display: block;
+		font-size: 10px;
+		text-align: center;
+    }
+
+    .section {
+        margin: 0px 10% 5px 10%;
+        border: 1px solid #fff;
+        font-size: 16px;
+    }
+
+    .date {
+        margin: 0px 10% 5px 10%;
+        border: 1px solid #aeaeae;
+        width: auto;
+        background-color: #aeaeae;
+        color: #fff
+    }
+
+    .button, .button-voll {
+        padding: 5px 15px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .section,
+    .date {
+        margin: 5px;
+    }
+}
+
+@media (min-width: 620px) {
+
+    .days,
+    .table {
+        column-count: 1;
+
+    }
+
+    .section {
+        break-inside: avoid;
+    }
+}
+
+@media (min-width: 960px) {
+
+    .days,
+    .table {
+        -webkit-column-count: 6;
+        -moz-column-count: 6;
+        column-count: 6
+    }
+}
+
+div[class^=agb] {font-size:10px;}
+.agb::before {content: var(--agb);}
+.agba::before {content: var(--agba);}
+.agbb::before {content: var(--agbb);}
+.agbc::before {content: var(--agbc);}
+.magb::before {content: var(--agb);}
+.magba::before {content: var(--agba);}
+.magbb::before {content: var(--agbb);}
+.magbc::before {content: var(--agbc);}
+
+</style>
+<p style="text-align: center;">Stornierungen und Umbuchungen bitte per Mail: info@tanzstudio-schlegl.de</p>
+
+<div class="date">02.08. – 07.08.</div>
+
+<div class="days">
+    <div class="dayssection">
+        Montag
+    </div>
+    <div class="dayssection">
+        Dienstag
+    </div>
+    <div class="dayssection">
+        Mittwoch
+    </div>
+    <div class="dayssection">
+        Donnerstag
+    </div>
+    <div class="dayssection">
+        Freitag
+    </div>
+    <div class="dayssection">
+        Samstag
+    </div>
 </div>
-<br>
-<div class="tg-wrap">
-    <table class="tgende">
-        <thead>
-            <tr class="date" id="date">
-                <th colspan="7">10.08.20 - 15.08.20</th>
-            </tr>
-            <tr>
-                <th class="tg-t">Zeit</th>
-                <th class="tg-mt">Montag</th>
-                <th class="tg-mt">Dienstag</th>
-                <th class="tg-mt">Mittwoch</th>
-                <th class="tg-mt">Donnerstag</th>
-                <th class="tg-mt">Freitag</th>
-                <th class="tg-mt">Samstag</th>
-                <th class="tg-trm">Zeit</th>
 
+<div class="table">
+    <!-- MONTAG -->
+    <div class="section">
+        <p class="mobiledate">Montag 02.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Vonda<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Montag 02.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Vonda<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="tg-t">15:00 - 15:45</td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt">ChaChaCha: Basic (solo)<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-button">Rumba: Basic (solo)<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-trm">15:00 - 15:45</td>
+    <!-- DIENSTAG -->
+    <div class="section">
+        <p class="mobiledate">Dienstag 03.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Vonda<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Dienstag 03.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Vonda<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
 
-            </tr>
-            <tr>
-                <td class="tg-t">16:00 - 16:45</td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt">Tango mal anders<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-button">Discofox: Fallfiguren Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP262T/">Anmelden</a></button></td>
-                <td class="tg-trm">16:00 - 16:45</td>
+    <!-- MITTWOCH -->
+    <div class="section">
+        <p class="mobiledate">Mittwoch 04.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Vonda<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Mittwoch 04.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Vonda<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
 
-            </tr>
-            <tr>
-                <td colspan="7"></td>
-            </tr>
-            <tr>
-                <td class="tg-t">18:00 - 18:45</td>
-                <td class="tg-button">ChaChaCha: Figur aus Videoportal<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP211T/">Anmelden</a></button></td>
-                <td class="tg-button">Langsamer Walzer für wenig Platz<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-button">Tango mal anders<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP231T/">Anmelden</a></button></td>
-                <td class="tg-button">Discofox: Figur<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-button">Boogie Woogie: Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP253T/">Anmelden</a></button></td>
-                <td class="tg-button">Tango mal anders<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-trm">18:00 - 18:45</td>
+    <!-- DONNERSTAG -->
+    <div class="section">
+        <p class="mobiledate">Donnerstag 05.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Vonda<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Donnerstag 05.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Vonda<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
 
-            </tr>
-            <tr>
-                <td class="tg-t">19:00 - 19:45</td>
-                <td class="tg-button">Discofox: Fortgeschrittenen Figur<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP212T/">Anmelden</a></button></td>
-                <td class="tg-button">Salsa: Figur<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP222T/">Anmelden</a></button></td>
-                <td class="tg-button">Rumba: Basic (solo)<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-button">Discofox: Fallfigur für Erwachsene<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Boogie Woogie: Fortgeschrittene<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP254T/">Anmelden</a></button></td>
-                <td class="tg-button">Jive: Figur<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP264T/">Anmelden</a></button></td>
-                <td class="tg-trm">19:00 - 19:45</td>
+    <!-- FREITAG -->
+    <div class="section">
+        <p class="mobiledate">Freitag 06.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Vonda<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Freitag 06.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Vonda<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
 
-            </tr>
-            <tr>
-                <td class="tg-t">20:00 - 20:45</td>
-                <td class="tg-button">Üben mit Urbi: Lateintänze<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Üben mit Urbi: gemischt (2)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP223T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Urbi: Standardtänze<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Üben mit Urbi: Discofox<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP243T/">Anmelden</a></button></td>
-                <td class="tg-button">Proseccoabend mit Urbi (alle Tänze)<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">ChaChaCha: Figur<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP265T/">Anmelden</a></button></td>
-                <td class="tg-trm">20:00 - 20:45</td>
-
-            </tr>
-            <tr>
-                <td class="tg-t">21:00 - 21:45</td>
-                <td class="tg-button">Üben mit Urbi: Standardtänze<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP214T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Urbi: Gemischt (1)<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Üben mit Urbi: Lateintänze<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP234T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Urbi: Salsa<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-button">Proseccoabend mit Urbi (alle Tänze)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP256T/">Anmelden</a></button></td>
-                <td class="tg-mt"></td>
-                <td class="tg-trm">21:00 - 21:45</td>
-
-            </tr>
-            <tr class="legend">
-                <td colspan="7" style="font-size:10px;">Üben gemischt (1) = Langsamer Walzer, ChaChaCha, Tango, Rumba, Salsa<br>
-                    Üben gemischt (2) = Quickstep, Wiener Walzer, Discofox, Slowfox, Jive, Samba<br>
-                    Pro Kurseinheit 10 Euro pro Person / Proseccoabend (mit 1 Glas Prosecco) 15 Euro pro Person<br>
-                    Anmeldung nur Paarweise - Außer bei den mit (solo) beschrifteten Einheiten<br>
-                    Die Kurse laufen ab 3 Paaren. Nicht stattfindende Kurse sagen wir am Tag vorher ab.<br>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- SAMSTAG -->
+    <div class="section">
+        <p class="mobiledate">Samstag 07.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Vonda<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Samstag 07.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Vonda<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
 </div>
-<br>
-<div class="tg-wrap">
-    <table class="tgende">
-        <thead>
-            <tr class="date" id="date">
-                <th colspan="7" id="date">17.08.20 - 22.08.20</th>
-            </tr>
-            <tr>
-                <th class="tg-t">Zeit</th>
-                <th class="tg-mt">Montag</th>
-                <th class="tg-mt">Dienstag</th>
-                <th class="tg-mt">Mittwoch</th>
-                <th class="tg-mt">Donnerstag</th>
-                <th class="tg-mt">Freitag</th>
-                <th class="tg-mt">Samstag</th>
-                <th class="tg-trm">Zeit</th>
+<div class="agb"></div>
+<div class="agba"></div>
+<div class="agbb"></div>
+<div class="agbc" style="margin-bottom: 10px;"></div>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="tg-t">15:00 - 15:45</td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt">Samba: Neue Figur<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-button">Samba: Basic (solo)<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-trm">15:00 - 15:45</td>
 
-            </tr>
-            <tr>
-                <td class="tg-t">16:00 - 16:45</td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt">ChaChaCha: Basic (solo)<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-button">Rock'n'Roll: Fortgeschrittene<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-trm">16:00 - 16:45</td>
+<div class="date">09.08. - 14.08.</div>
 
-            </tr>
-            <tr>
-                <td colspan="7"></td>
-            </tr>
-            <tr>
-                <td class="tg-t">18:00 - 18:45</td>
-                <td class="tg-button">Tennessee Waltz: Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP311T/">Anmelden</a></button></td>
-                <td class="tg-button">Paso Doble: Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP321T/">Anmelden</a></button></td>
-                <td class="tg-button">Boogie Woogie: Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP331T/">Anmelden</a></button></td>
-                <td class="tg-button">Linedance: Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP341T/">Anmelden</a></button></td>
-                <td class="tg-button">Rock'n'Roll: Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP353T/">Anmelden</a></button></td>
-                <td class="tg-button">ChaChaCha: Figur für Jugend-Rang-Kurse<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-trm">18:00 - 18:45</td>
-
-            </tr>
-            <tr>
-                <td class="tg-t">19:00 - 19:45</td>
-                <td class="tg-button">Rumba: Aus Videoportal<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP312T/">Anmelden</a></button></td>
-                <td class="tg-button">Paso Doble: Fortgeschrittene<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP322T/">Anmelden</a></button></td>
-                <td class="tg-button">Boogie Woogie: Fortgeschrittene<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP332T/">Anmelden</a></button></td>
-                <td class="tg-button">Salsa: Aus Videoportal<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP342T/">Anmelden</a></button></td>
-                <td class="tg-button">Linedance: Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP354T/">Anmelden</a></button></td>
-                <td class="tg-button">Rumba: Figur für Jugend-Rang-Kurse<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP364T/">Anmelden</a></button></td>
-                <td class="tg-trm">19:00 - 19:45</td>
-
-            </tr>
-            <tr>
-                <td class="tg-t">20:00 - 20:45</td>
-                <td class="tg-button">Üben mit Domi: Gemischt (1)<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Üben mit Domi: Standardtänze<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Üben mit Domi: Gemischt (2)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP333T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Domi: Discofox<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP343T/">Anmelden</a></button></td>
-                <td class="tg-button">Proseccoabend mit Domi (alle Tänze)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP355T/">Anmelden</a></button></td>
-                <td class="tg-button">Partytanz Remix Jugendliche (solo)<br>
-                    <button class="button-voll">Abgesagt</button></td>
-                <td class="tg-trm">20:00 - 20:45</td>
-
-            </tr>
-            <tr>
-                <td class="tg-t">21:00 - 21:45</td>
-                <td class="tg-button">Üben mit Domi: Gemischt (2)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP314T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Domi: Lateintänze<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP324T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Domi: Gemischt (1)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP334T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Domi: Salsa<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP344T/">Anmelden</a></button></td>
-                <td class="tg-button">Proseccoabend mit Domi (alle Tänze)<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-mt"></td>
-                <td class="tg-trm">21:00 - 21:45</td>
-
-            </tr>
-            <tr class="legend">
-                <td colspan="7" style="font-size:10px;">Üben gemischt (1) = Langsamer Walzer, ChaChaCha, Tango, Rumba, Salsa<br>
-                    Üben gemischt (2) = Quickstep, Wiener Walzer, Discofox, Slowfox, Jive, Samba<br>
-                    Pro Kurseinheit 10 Euro pro Person / Proseccoabend (mit 1 Glas Prosecco) 15 Euro pro Person<br>
-                    Anmeldung nur Paarweise - Außer bei den mit (solo) beschrifteten Einheiten<br>
-                    Die Kurse laufen ab 3 Paaren. Nicht stattfindende Kurse sagen wir am Tag vorher ab.<br>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="days">
+    <div class="dayssection">
+        Montag
+    </div>
+    <div class="dayssection">
+        Dienstag
+    </div>
+    <div class="dayssection">
+        Mittwoch
+    </div>
+    <div class="dayssection">
+        Donnerstag
+    </div>
+    <div class="dayssection">
+        Freitag
+    </div>
+    <div class="dayssection">
+        Samstag
+    </div>
 </div>
-<br>
-<div class="tg-wrap">
-    <table class="tg">
-        <thead>
-            <tr class="date" id="date">
-                <th colspan="7">24.08.20 - 29.08.20</th>
-            </tr>
-            <tr>
-                <th class="tg-t">Zeit</th>
-                <th class="tg-mt">Montag</th>
-                <th class="tg-mt">Dienstag</th>
-                <th class="tg-mt">Mittwoch</th>
-                <th class="tg-mt">Donnerstag</th>
-                <th class="tg-mt">Freitag</th>
-                <th class="tg-mt">Samstag</th>
-                <th class="tg-trm">Zeit</th>
+<div class="table">
+    <!-- MONTAG -->
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Montag 09.08.21</p>
+        <p>19:30 - 21:00 Uhr<br>
+            Üben mit Domi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <!-- DIENSTAG -->
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Dienstag 10.08.21</p>
+        <p>19:30 - 21:00 Uhr<br>
+            Üben mit Domi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="tg-t">15:00 - 15:45</td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt">Breakdance (solo)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP451T/">Anmelden</a></button></td>
-                <td class="tg-button">West Coast Swing: Anfänger (Jugendliche)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP461T/">Anmelden</a></button></td>
-                <td class="tg-trm">15:00 - 15:45</td>
+    <!-- MITTWOCH -->
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Mittwoch 11.08.21</p>
+        <p>19:30 - 21:00 Uhr<br>
+            Üben mit Domi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
 
-            </tr>
-            <tr>
-                <td class="tg-t">16:00 - 16:45</td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt"></td>
-                <td class="tg-mt">HipHop (solo)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP452T/">Anmelden</a></button></td>
-                <td class="tg-button">West Coast Swing: Fortgeschrittene (Jugendliche)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP462T/">Anmelden</a></button></td>
-                <td class="tg-trm">16:00 - 16:45</td>
+    <!-- DONNERSTAG -->
+    <div class="section">
+        <p class="mobiledate">Donnerstag 12.08.21</p>
+        <p>16:00 - 17:30 Uhr<br>
+            Tanztee Senioren<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Donnerstag 12.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Domi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Donnerstag 12.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Domi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
 
-            </tr>
-            <tr>
-                <td colspan="7"></td>
-            </tr>
-            <tr>
-                <td class="tg-t">18:00 - 18:45</td>
-                <td class="tg-button">West Coast Swing: Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP411T/">Anmelden</a></button></td>
-                <td class="tg-button">Discofox: Aus Videoportal<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP421T/">Anmelden</a></button></td>
-                <td class="tg-button">HipHop: Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP431T/">Anmelden</a></button></td>
-                <td class="tg-button">West Coast Swing: Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP441T/">Anmelden</a></button></td>
-                <td class="tg-button">Bachata: Anfänger<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP453T/">Anmelden</a></button></td>
-                <td class="tg-button">Shuffle<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP463T/">Anmelden</a></button></td>
-                <td class="tg-trm">18:00 - 18:45</td>
+    <!-- FREITAG -->
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Freitag 13.08.21</p>
+        <p>17:30 - 18:15 Uhr<br>
+            Linedance (solo)<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Freitag 13.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Domi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Freitag 13.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Domi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+    </div>
 
-            </tr>
-            <tr>
-                <td class="tg-t">19:00 - 19:45</td>
-                <td class="tg-button">West Coast Swing: Fortgeschrittene<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP412T/">Anmelden</a></button></td>
-                <td class="tg-button">Salsa: Aus Videoportal<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP422T/">Anmelden</a></button></td>
-                <td class="tg-button">Langsamer Walzer: Damensolo<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP432T/">Anmelden</a></button></td>
-                <td class="tg-button">West Coast Swing: Fortgeschrittene<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP442T/">Anmelden</a></button></td>
-                <td class="tg-button">Bachata: Fortgeschrittene<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP454T/">Anmelden</a></button></td>
-                <td class="tg-button">Breakdance (solo)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP464T/">Anmelden</a></button></td>
-                <td class="tg-trm">19:00 - 19:45</td>
-
-            </tr>
-            <tr>
-                <td class="tg-t">20:00 - 20:45</td>
-                <td class="tg-button">Üben mit Toby: Lateintänze<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP413T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Toby: Gemischt (2)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP423T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Toby: Standardtänze<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">Üben mit Toby: West Coast Swing<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP443T/">Anmelden</a></button></td>
-                <td class="tg-button">Proseccoabend mit Toby (alle Tänze)<br>
-                    <button class="button-voll">Ausgebucht</button></td>
-                <td class="tg-button">HipHop Duo<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP465T/">Anmelden</a></button></td>
-                <td class="tg-trm">20:00 - 20:45</td>
-
-            </tr>
-            <tr>
-                <td class="tg-t">21:00 - 21:45</td>
-                <td class="tg-button">Üben mit Toby: Standardtänze<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP414T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Toby: Gemischt (1)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP424T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Toby: Lateintänze<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP434T/">Anmelden</a></button></td>
-                <td class="tg-button">Üben mit Toby: Salsa<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP444T/">Anmelden</a></button></td>
-                <td class="tg-button">Proseccoabend mit Toby (alle Tänze)<br>
-                    <button class="button"><a href="https://schlegl-verwaltung.herokuapp.com/kurs-anmeldung/anmeldung/FP456T/">Anmelden</a></button></td>
-                <td class="tg-mt"></td>
-                <td class="tg-trm">21:00 - 21:45</td>
-
-            </tr>
-            <tr class="legend">
-                <td colspan="7" style="font-size:10px;">Üben gemischt (1) = Langsamer Walzer, ChaChaCha, Tango, Rumba, Salsa<br>
-                    Üben gemischt (2) = Quickstep, Wiener Walzer, Discofox, Slowfox, Jive, Samba<br>
-                    Pro Kurseinheit 10 Euro pro Person / Proseccoabend (mit 1 Glas Prosecco) 15 Euro pro Person<br>
-                    Anmeldung nur Paarweise - Außer bei den mit (solo) beschrifteten Einheiten<br>
-                    Die Kurse laufen ab 3 Paaren. Nicht stattfindende Kurse sagen wir am Tag vorher ab.<br>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- SAMSTAG -->
+    <div class="section">
+        <p class="mobiledate">Samstag 14.08.21</p>
+        <p>16:30 - 17:15 Uhr<br>
+            Partytanz (solo)<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Samstag 14.08.21</p>
+        <p>17:30 - 18:15 Uhr<br>
+            CCC Zoom-Figur<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Samstag 14.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Domi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Samstag 14.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Domi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
 </div>
+<div class="agb"></div>
+<div class="agba"></div>
+<div class="agbb"></div>
+<div class="agbc" style="margin-bottom: 10px;"></div>
+
+<div class="date">16.08.21 – 21.08.21</div>
+
+<div class="days">
+    <div class="dayssection">
+        Montag
+    </div>
+    <div class="dayssection">
+        Dienstag
+    </div>
+    <div class="dayssection">
+        Mittwoch
+    </div>
+    <div class="dayssection">
+        Donnerstag
+    </div>
+    <div class="dayssection">
+        Freitag
+    </div>
+    <div class="dayssection">
+        Samstag
+    </div>
+</div>
+<div class="table">
+    <!-- MONTAG -->
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="sectionempty" style="min-height: var(--3zeilen)">
+        <p></p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Montag 16.08.21</p>
+        <p>19:30 - 21:00 Uhr<br>
+            Üben mit Urbi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <!-- DIENSTAG -->
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="sectionempty"  style="min-height: var(--3zeilen)">
+        <p></p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Dienstag 17.08.21</p>
+        <p>19:30 - 21:00 Uhr<br>
+            Üben mit Urbi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+
+    <!-- MITTWOCH -->
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="sectionempty" style="min-height: var(--3zeilen)">
+        <p></p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Mittwoch 18.08.21</p>
+        <p>19:30 - 21:00 Uhr<br>
+            Üben mit Urbi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+
+    <!-- DONNERSTAG -->
+    <div class="section">
+        <p class="mobiledate">Donnerstag 19.08.21</p>
+        <p>16:00 - 17:30 Uhr<br>
+            Tanztee Senioren<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="sectionempty" style="min-height: var(--3zeilen)">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Donnerstag 19.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Urbi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Donnerstag 19.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Urbi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+
+    <!-- FREITAG -->
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Freitag 20.08.21</p>
+        <p>17:30 - 18:15 Uhr<br>
+            Discofox<br>
+			Fallfiguren<br>
+			(Beginner)<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Freitag 20.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Urbi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Freitag 20.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Urbi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+    </div>
+
+    <!-- SAMSTAG -->
+    <div class="section">
+        <p class="mobiledate">Samstag 21.08.21</p>
+        <p>16:30 - 17:15 Uhr<br>
+            Jive Figur<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section" style="min-height: var(--3zeilen)">
+        <p class="mobiledate">Samstag 21.08.21</p>
+        <p>17:30 - 18:15 Uhr<br>
+            CCC Figur<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Samstag 21.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Urbi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Samstag 21.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Urbi<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+</div>
+<div class="agb"></div>
+<div class="agba"></div>
+<div class="agbb"></div>
+<div class="agbc" style="margin-bottom: 10px;"></div>
+
+<div class="date">23.08. – 28.08.</div>
+
+<div class="days">
+    <div class="dayssection">
+        Montag
+    </div>
+    <div class="dayssection">
+        Dienstag
+    </div>
+    <div class="dayssection">
+        Mittwoch
+    </div>
+    <div class="dayssection">
+        Donnerstag
+    </div>
+    <div class="dayssection">
+        Freitag
+    </div>
+    <div class="dayssection">
+        Samstag
+    </div>
+</div>
+<div class="table">
+    <!-- MONTAG -->
+    <div class="sectionempty" style="min-height: var(--2zeilen)">
+        <p></p>
+    </div>
+    <div class="sectionempty" style="min-height: var(--2zeilen)">
+        <p></p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Montag 23.08.21</p>
+        <p>19:30 - 21:00 Uhr<br>
+            Üben mit Toby<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <!-- DIENSTAG -->
+    <div class="sectionempty" style="min-height: var(--2zeilen)">
+        <p></p>
+    </div>
+    <div class="sectionempty" style="min-height: var(--2zeilen)">
+        <p></p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Dienstag 24.08.21</p>
+        <p>19:30 - 21:00 Uhr<br>
+            Üben mit Toby<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+
+    <!-- MITTWOCH -->
+    <div class="sectionempty" style="min-height: var(--2zeilen)">
+        <p></p>
+    </div>
+    <div class="sectionempty" style="min-height: var(--2zeilen)">
+        <p></p>
+    </div>
+    <div class="sectionempty">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Mittwoch 25.08.21</p>
+        <p>19:30 - 21:00 Uhr<br>
+            Üben mit Toby<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+
+    <!-- DONNERSTAG -->
+    <div class="section">
+        <p class="mobiledate">Donnerstag 26.08.21</p>
+        <p>17:30 - 18:15 Uhr<br>
+            Bachata<br>
+			Fortgeschrittene<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="sectionempty" style="min-height: var(--2zeilen)">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Donnerstag 26.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Toby<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Donnerstag 26.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Toby<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+
+    <!-- FREITAG -->
+    <div class="sectionempty" style="min-height: var(--2zeilen)">
+        <p></p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Freitag 27.08.21</p>
+        <p>17:30 - 18:15 Uhr<br>
+            West Coast Swing<br>
+			Fortgeschrittene<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Freitag 27.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Toby<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Freitag 27.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Toby<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+    </div>
+
+    <!-- SAMSTAG -->
+    <div class="section" style="min-height: var(--2zeilen)">
+        <p class="mobiledate">Samstag 28.08.21</p>
+        <p>16:30 - 17:15 Uhr<br>
+            Hip Hop (solo)<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section" style="min-height: var(--2zeilen)">
+        <p class="mobiledate">Samstag 28.08.21</p>
+        <p>17:30 - 18:15 Uhr<br>
+            Hip Hop (Duo)<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Samstag 28.08.21</p>
+        <p>18:30 - 20:00 Uhr<br>
+            Üben mit Toby<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+    <div class="section">
+        <p class="mobiledate">Samstag 28.08.21</p>
+        <p>20:15 - 21:45 Uhr<br>
+            Üben mit Toby<br>
+            <button class="button"><a href="" target="blank" rel="noopener">Anmelden</a></button>
+        </p>
+    </div>
+</div>
+<div class="agb"></div>
+<div class="agba"></div>
+<div class="agbb"></div>
+<div class="agbc" style="margin-bottom: 10px;"></div>
+/* AGB 1x für mobil */
+<div class="magb"></div>
+<div class="magba"></div>
+<div class="magbb"></div>
+<div class="magbc" style="margin-bottom: 10px;"></div>
