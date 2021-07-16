@@ -1,7 +1,7 @@
 html Buchungsportal Tanzstudio Schlegl für mehrere Wochen.
 
-![Ansicht Desktop](https://github.com/kartoffelkaese/programm-mehrere-wochen/blob/main/programm-mehrere-wochen.png?raw=true)
+![Ansicht Desktop](https://github.com/kartoffelkaese/programm-mehrere-wochen/blob/main/desktop.png?raw=true)
 
 Responsiv
 
-![Ansicht Mobil](https://github.com/kartoffelkaese/programm-mehrere-wochen/blob/main/programm-mehrere-wochen-responsiv.png?raw=true)
+![Ansicht Mobil](https://github.com/kartoffelkaese/programm-mehrere-wochen/blob/main/mobil.png?raw=true)
