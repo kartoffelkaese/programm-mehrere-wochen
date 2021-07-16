@@ -1,158 +1,180 @@
-<style type="text/css">
-    /* <button class="button-voll">Ausgebucht</button>
-       <button class="button-voll">Abgesagt</button> */
-    .tg {
-        border-collapse: collapse;
-        border-spacing: 0;
-        margin: 0px auto;
-        font-family: 'Roboto', Verdana, Geneva, sans-serif;
-        table-layout: fixed;
-        width: 100%;
+<style>
+	/*
+	<button class="button-voll">Ausgebucht</button>
+    <button class="button-voll">Abgesagt</button> 
+	*/
+:root {
+	--agb: "Übungsstunden 10 Euro pro Person / Workshops 15 Euro pro Person";
+	--agba: "Anmeldung nur Paarweise - Außer bei den mit (solo) beschrifteten Einheiten";
+	--agbb: "Mindestteilnehmer: 5 Paare (Workshops) / 10 Paare (Übungsstunden)";
+	--agbc: "Nicht stattfindende Kurse sagen wir am Tag vorher per Mail ab.";
+	--3zeilen: 159px;
+	--2zeilen: 138px;
+	}
+
+.date {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 24px;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.date:not(:first-child) {
+margin-top: 30px;
+}
+
+.days,
+.table {
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.dayssection {
+    font-size: 14px;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--purple);
+    border: 1px solid #000;
+}
+
+.section {
+    margin-bottom: -1px;
+    overflow: hidden;
+    text-align: center;
+    min-height: 117px;
+    border: 1px solid #000;
+}
+
+.sectionempty {
+    margin-bottom: -1px;
+    overflow: hidden;
+    break-inside: avoid;
+    min-height: 117px;
+    border: 1px solid #000;
+}
+
+.mobiledate {
+    display: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.button {
+    background-color: var(--purple);
+    border: none;
+    color: white;
+    padding: 0 15px;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: .875rem;
+    line-height: 28px;
+    min-width: 100px;
+}
+
+.button-voll {
+	background-color: #f00;
+	border: none;
+	color: white;
+	padding: 0 15px;
+	margin-top: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: .875rem;
+	line-height: 28px;
+    min-width: 100px;
     }
 
-    .tgende {
+div[class^=magb] {
         display: none;
     }
 
-    .tg td {
-        border-color: black;
-        border-width: 1px;
-        font-size: 14px;
-        overflow: hidden;
-        padding: 10px 5px;
-        word-break: normal;
-    }
+@media (max-width: 960px) {
 
-    .tg th {
-        border-color: black;
-        border-style: solid;
-        border-width: 1px;
-        font-size: 14px;
-        font-weight: normal;
-        overflow: hidden;
-        padding: 10px 5px;
-        word-break: normal;
-        background-color: #a50775;
-    }
-
-    .tg-mt {
-        border: 1px solid #000;
-        text-align: center;
-        vertical-align: bottom;
-    }
-
-    .tg-t {
-        border: 1px solid #000;
-        text-align: center;
-        vertical-align: middle;
-    }
-
-    .tg-trm {
-        border: 1px solid #000;
-        text-align: center;
-        vertical-align: middle;
+    .days,
+    .sectionempty,
+	div[class^=agb] {
         display: none;
     }
 
-    tr:hover {
-        background-color: #323232;
+    .mobiledate {
+        display: inline;
+        font-size: 20px;
+    }
+	div[class^=magb] {
+        display: block;
+		font-size: 10px;
+		text-align: center;
     }
 
-    .date th {
-        font-size: 24px;
-        background-color: transparent;
-        colspan
+    .section {
+        margin: 0px 10% 5px 10%;
+        border: 1px solid #fff;
+        font-size: 16px;
     }
 
-    .date:hover {
-        background-color: transparent;
+    .date {
+        margin: 0px 10% 5px 10%;
+        border: 1px solid #aeaeae;
+        width: auto;
+        background-color: #aeaeae;
+        color: #fff
     }
 
-    .tg-button {
-        text-align: center;
-        vertical-align: bottom;
-        border: 1px solid #000;
+    .button, .button-voll {
+        padding: 5px 15px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .section,
+    .date {
+        margin: 5px;
+    }
+}
+
+@media (min-width: 620px) {
+
+    .days,
+    .table {
+        column-count: 1;
+
     }
 
-    .legend:hover {
-        background-color: transparent;
+    .section {
+        break-inside: avoid;
     }
+}
 
-    .button {
-        background-color: #a50775;
-        border: none;
-        color: white;
-        padding: 0 15px;
-        margin-top: 5px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: .875rem;
-        line-height: 28px;
+@media (min-width: 960px) {
+
+    .days,
+    .table {
+        -webkit-column-count: 6;
+        -moz-column-count: 6;
+        column-count: 6
     }
+}
 
-    .button-voll {
-        background-color: #f00;
-        border: none;
-        color: white;
-        padding: 0 15px;
-        margin-top: 5px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: .875rem;
-        line-height: 28px;
-    }
+div[class^=agb] {font-size:10px;}
+.agb::before {content: var(--agb);}
+.agba::before {content: var(--agba);}
+.agbb::before {content: var(--agbb);}
+.agbc::before {content: var(--agbc);}
+.magb::before {content: var(--agb);}
+.magba::before {content: var(--agba);}
+.magbb::before {content: var(--agbb);}
+.magbc::before {content: var(--agbc);}
 
-    .button:hover {
-        background-color: #242021;
-    }
-
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    /* Mobilversion unten */
-    @media screen and (max-width: 767px) {
-        .tg {
-            width: auto !important;
-        }
-
-        .tg col {
-            width: auto !important;
-        }
-
-        .tg-wrap {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            margin: auto 0px;
-            width: 100%;
-        }
-
-        .tg-trm {
-            border: 1px solid #000;
-            text-align: center;
-            vertical-align: middle;
-            display: table-cell;
-        }
-
-        .date th {
-            text-align: left;
-            border: none;
-            position: absolute;
-        }
-
-        #date {
-            height: 40px;
-            border: none;
-        }
-
-        #date th {
-            border: none;
-        }
-    }
 </style>
